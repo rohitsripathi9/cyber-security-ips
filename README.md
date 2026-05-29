@@ -1,6 +1,9 @@
 # (IPS) Using Machine Learning
 
 This project provides an Intrusion Prevention System. It uses a machine learning model to look at network traffic and block malicious IP addresses automatically.
+## Architecture Diagram
+
+![Architecture](architecture.png)
 
 The main focus of this setup is the deployment. It captures live network packets, sends them to a pre-trained model to check if they are dangerous, and then uses Linux firewall rules (iptables) to instantly block the attacker.
 
