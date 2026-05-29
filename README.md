@@ -1,9 +1,20 @@
 # (IPS) Using Machine Learning
 
-This project provides an Intrusion Prevention System. It uses a machine learning model to look at network traffic and block malicious IP addresses automatically.
 ## Architecture Diagram
-
 ![Architecture](architecture.png)
+
+This project provides an Intrusion Prevention System. It uses a machine learning model to look at network traffic and block malicious IP addresses automatically.
+
+
+### System Outputs
+
+Here are examples of the system in action during an attack:
+
+**Attacker Execution:**
+![Attacker Sending Malicious Traffic](outputs/attacker.png)
+
+**Defender (IPS) Detection and Blocking:**
+![IPS Predicting and Blocking Attack](outputs/defender.png)
 
 The main focus of this setup is the deployment. It captures live network packets, sends them to a pre-trained model to check if they are dangerous, and then uses Linux firewall rules (iptables) to instantly block the attacker.
 
@@ -57,15 +68,7 @@ sudo python3 malicious_traffic_sender.py
 ```
 If everything is set up correctly, the Ubuntu machine will detect the attack, print a warning in the terminal, and permanently block the IP address of the Linux Mint machine using iptables.
 
-### System Outputs
 
-Here are examples of the system in action during an attack:
-
-**Attacker Execution:**
-![Attacker Sending Malicious Traffic](outputs/attacker.png)
-
-**Defender (IPS) Detection and Blocking:**
-![IPS Predicting and Blocking Attack](outputs/defender.png)
 
 ## Training Your Own Model
 
